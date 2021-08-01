@@ -1,0 +1,4 @@
+[0m2021.04.30 22:20:26 INFO  Started: Metals version 0.10.2 in workspace 'G:\side projects\Backend\bikeautomation' for client vscode 1.55.2.[0m
+[0m2021.04.30 22:20:30 INFO  time: initialize in 3.37s[0m
+[0m2021.04.30 22:20:33 WARN  Build server is not auto-connectable.[0m
+[0m2021.04.30 22:20:33 WARN  no build tool detected in workspace 'G:\side projects\Backend\bikeautomation'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
