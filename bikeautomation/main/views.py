@@ -162,7 +162,7 @@ def Verifycard(request,card_num):
                 
                 time_in_points= diff/60
                 #The 3 in cost=time_in_points*3 says the cost of each min is 3rs, change the value to make a new rate
-                cost= time_in_points*4
+                cost= time_in_points*2
                 user.profile.balance-=cost
                 user.profile.save()
                 ride.difference=diff
