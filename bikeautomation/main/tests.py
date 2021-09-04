@@ -6,17 +6,17 @@ from .validators import email_validator,name_validator,phone_validator,nic_valid
 # Create your tests here.
 class InitialTest(TestCase):
     def Setup(self):
-         self.user = User.objects.create_user(first_name="Syed Bilal", last_name="Ali", email="syed.bil.sba@gmail.com",
-                                        username='syedbilal28', password='hellojee')
+         self.user = User.objects.create_user(first_name="Syed Saim", last_name="Ali", email="syed.bil.sba@gmail.com",
+                                        username='syedsai28', password='hellojee')
     def test1(self):
-        full_name= "Syed Bilal Ali"
+        full_name= "Syed Saim Abbas"
         if name_validator(full_name) == False:
             return JsonResponse({"message":"Invalid name"},status=400)
-        email="syed.bilal.sba@gmail.com"
+        email="syed.saim.sba@gmail.com"
         if email_validator(email) == False:
             return JsonResponse({"message":"Invalid email"},status=400)
 
-        username="bilal"
+        username="saim"
         contact="03428178566"
         if phone_validator(contact) == False:
             return JsonResponse({"message":"Invalid phone number"},status=400)

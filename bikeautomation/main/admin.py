@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models import Profile,Cycle,Maintenance,Card,CycleOnRoad,Complain,Feedback
-# Register your models here.
+
 
 admin.site.register(Profile)
 admin.site.register(Cycle)
