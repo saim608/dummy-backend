@@ -140,10 +140,12 @@ def Verifycard(request,card_num):
             else:
                 print("selecting first")
                 cycle=available_cycles[0]
-            ride =CycleOnRoad.objects.create(cycle=cycle,card=card,status=1)
-            cycle.status="A"
-            cycle.save()
-            return JsonResponse({"message":"Ride started"},status=201)
+            current_user=Profile.objects.get(card=card)
+            if current_rider== current_user:
+                ride =CycleOnRoad.objects.create(cycle=cycle,card=card,status=1)
+                cycle.status="A"
+                cycle.save()
+                return JsonResponse({"message":"Ride started"},status=201)
         else:
             return JsonResponse({"message":"Timeout"},status=400)
     else:
