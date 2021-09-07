@@ -141,7 +141,9 @@ def Verifycard(request,card_num):
                 print("selecting first")
                 cycle=available_cycles[0]
             current_user=Profile.objects.get(card=card)
-            if current_rider== current_user:
+            # print(f"current {current_rider.user} {current_user.user}")
+            
+            if User.objects.get(username=current_rider.user) == current_user.user:
                 ride =CycleOnRoad.objects.create(cycle=cycle,card=card,status=1)
                 cycle.status="A"
                 cycle.save()
